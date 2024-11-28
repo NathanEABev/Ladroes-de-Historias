@@ -1,4 +1,4 @@
-window.alert("Tá tudo ferrado, mandei só pra não perder nota pela plataforma, arrumo ainda hoje.                               O menu e as opçoes de categorias estão diferentes Gabi, clique nas imagens de menu e de setinha pra baixo(canto esquerdo do header")
+window.alert("O menu e as opções de categorias estão diferentes, Gabi. Clique nas imagens do menu e da setinha para baixo (localizadas no canto esquerdo do header) para visualizar. Dentro do menu da setinha, é possível clicar em 'Categorias', que abrirá um menu secundário.")
 
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu-escondido');
@@ -16,19 +16,24 @@ overlay.addEventListener('click', () => {
     document.body.style.backgroundColor = 'white';
 });
 
-let lastScrollTop = 0; // Mantém o último valor do scroll
+const maisOpcoes = document.getElementById('maisopcoes');
+const divOpcoes = document.querySelector('.divopcoes');
 
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // Scroll para baixo: esconde o header
-        header.classList.add('hidden');
+maisOpcoes.addEventListener('click', () => {
+    if (divOpcoes.style.display === 'block') {
+    divOpcoes.style.display = 'none';
     } else {
-        // Scroll para cima: mostra o header
-        header.classList.remove('hidden');
+    divOpcoes.style.display = 'block';
     }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
 });
+
+const abreCategoria = document.getElementById('abrecategoria');
+    const divCategoria = document.querySelector('.divcategoria');
+
+    abreCategoria.addEventListener('click', () => {
+      if (divCategoria.style.display === 'block') {
+        divCategoria.style.display = 'none';
+      } else {
+        divCategoria.style.display = 'block';
+      }
+    });

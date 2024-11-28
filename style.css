@@ -28,7 +28,7 @@ header {
     display: flex;
     background-color: var(--azul-p);
     justify-content: space-between;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -120,7 +120,7 @@ header {
 }
 
 #logoimg {
-    width: 125px;
+    width: 100px;
 }
 
 .icons {
@@ -144,7 +144,7 @@ header {
 h1 {
     font-family: var(--font-p);
     color: var(--complementar);
-    font-size: 40px;
+    font-size: 35px;
     font-weight: normal;
     display: flex;
 }
@@ -153,11 +153,10 @@ h1 {
     background-color: var(--azul-s);
     font-size: 40px;
     text-align: center;
-    padding: 2.5em 2em;
+    padding: 70px 2em;
     margin-bottom: 1em;
     box-shadow: 10px 10px 15px #0008;
     font-weight: 300;
-    padding-top: 180px;
 }
 
 #inicio p {
@@ -253,12 +252,12 @@ input[type="search"]::placeholder {
     color: black;
     display: flex;
     padding-right: 100px;
-    text-align: justify;
+    text-align: left;
     width: 100%;
 }
 
 .descricaoimg{
-    height: 15em;
+    height: 10em;
     width: auto;
     display: flex;
     margin-bottom: 70px;
@@ -288,7 +287,7 @@ input[type="search"]::placeholder {
 
 .botao{
     background-color: white;
-    padding: 0.5em 1.7em;
+    padding: 0.5em 1em;
     display: block;
     margin: 0 auto;
     color: black;
@@ -308,7 +307,7 @@ input[type="search"]::placeholder {
 }
 
 .autor {
-    width: 300px;
+    width: 225px;
     margin-top: 90px;
     margin-left: 5px;
     margin-bottom: 90px;
@@ -495,116 +494,176 @@ footer a:hover {
 
 .rodapelink {
     margin-left: 0.6em;
+    font-size: 15px;
 }
 
-tanana:hover {
-    background-color: var(--azul-s);
-    font-weight: bold;
-    color: #fff;
-    -webkit-text-stroke: 2px black;
+#direita img {
+    width: 50px;
 }
 
-.pc {
+.divopcoes {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 35px;
+    background-color: var(--azul-p);
+    border-radius: 0 0 15px 15px;
+    padding: 5px;
 }
 
-listamenu {
-    left: 35%;
+.divopcoes h3 {
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-@media (max-width: 799px) {
-    .container img, .menuimg {
+.divopcoes a {
+    text-decoration: none;
+    color: var(--complementar);
+    font-size: 25px;
+    display: block;
+    margin: 5px;
+}
+
+.divopcoes a:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    background-color: var(--azul-s);
+}
+
+.divcategoria {
+    display: none;
+    position: absolute;
+    top: 35%;
+    right: 100%;
+    background-color: var(--azul-p);
+    border-radius: 15px 0 15px 15px;
+    padding: 5px;
+}
+
+.divcategoria h4 {
+    color: #fff;
+}
+
+@media (max-width: 799px){
+    .divopcoes {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 35px;
+        background-color: var(--azul-p);
+        border-radius: 0 0 15px 0;
+        padding: 5px;
+    }
+
+    .divcategoria {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 70%;
+        background-color: var(--azul-p);
+        border-radius: 15px 0 15px 15px;
+        padding: 5px;
+    }
+
+    .container img, .menuimg{
         width: 30px;
-        height: auto;
+        height: 30px;
         padding: 0.5em;
     }
-
-    #logoimg {
-        width: 50px;
-        height: auto;
-    }
-
-    .manuimg {
+    
+    .menu{
         width: 30px;
-        height: auto;
+        height: 30px;
     }
 
-    .opcoes {
-        display: none;
-    }
-
-    #esquerda h1 {
-        font-size: 25px;
-    }
-
-    .divopcoes a, .divopcoes h3 {
-        font-size: 15px;
-    }
-
-    .iniciotitulo{
+    #inicio h2 {
         font-size: 35px;
-      }
-      .indicacoes{
+    }
+
+    .indicacoes{
         padding: 1em;
-      }
-      .botao{
+    }
+    
+    .botao{
         padding: 1em 1em;
         max-width: 70px;
-      }
-      .contatotitulo, .contatotexto{
+    }
+
+    .contatotitulo, .contatotexto{
         font-size: 30px;
         max-width: 90%;
-      }
-      .contatoemail::placeholder{
+    }
+
+    .contatoemail::placeholder{
         background: auto;
         background-image: none;
-      }
-      .saibamais{
+    }
+
+    .saibamais{
         width: auto;
         padding: 0;
-      }
-      .saibamais img, .autor{
-        width: 130px;
+        float: inline-end;
+    }
+
+    .saibamais img{
+        width: 200px;
         height: auto;
         max-width: 90%;
         margin-top: 5em;
-      }
-      .botao{
+    }
+
+    .botao{
         width: 50%;
-      }
-      .swiper-slide img{
+    }
+
+    .swiper-slide img{
         width: 80px;
         height: auto;
         gap: 20px;
-      }
-      .topicos{
+    }
+
+    .topicos{
         display: flex;
         flex-direction: column;
         gap: 10px;
-      }
-      .topicostitulos{
+    }
+
+    .topicostitulo{
         font-size:25px;
-      }
-      .topicositem{
+        -webkit-text-stroke: 0;
+    }
+
+    .topicositem{
         height: 40px;
         font-size: 14px;
-      }
-      .topicoslink:hover{
+    }
+
+    .topicoslink {
+        -webkit-text-stroke: 0;
+    }
+
+    .topicoslink:hover{
         font-size: 22px;
-      }
-      
-      .listarodape, .rodapelink{
+    }
+    
+    .listarodape, .rodapelink{
         display: none;
-      }
-      .rodapetitulo{
+    }
+
+    footer h2 {
         font-size: 15px;
         width: 80%;
-      }
-      .pesquisa::placeholder, .contatoemail::placeholder{
+        margin-bottom: 0;
+    }
+    
+    .pesquisa::placeholder, .contatoemail::placeholder{
         font-size: 13px;
-      }
-      .titulo{
-        font-size: 25px;
+    }
+    .titulo{
+        font-size: 30px;
         width: 80%;
-      }
+        -webkit-text-stroke: 0;
+        color: black;
+    }
 }
